@@ -1,4 +1,5 @@
-export default function Suggestion({ upvotes, comments, category }){
+export default function Suggestion({ }){
+  console.log(data);
   return(
     <>
       <div className="suggestion-item">
