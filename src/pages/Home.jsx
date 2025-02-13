@@ -4,14 +4,23 @@ import { DataContext } from "../App";
 
 export default function Home() {
   const { data } = useContext(DataContext);
-  console.log(data)
-
-
+  
 
   return (
     <>
-    <Link to={`/feedback-details/1`}>id 1</Link>
-    <Outlet />
+    <header className="header">
+     <div className="header-name">
+     <h1>Frontend Mentor</h1>
+     <h3>Feedback Board</h3>
+     </div>
+      <a href="#"><img src="images/hamburger.svg" alt="" /></a>
+    </header>
+    <div className="header-container">
+      <label htmlFor="Sort by:">
+        
+      </label>
+    </div>
+  
     </>
   )
 }
