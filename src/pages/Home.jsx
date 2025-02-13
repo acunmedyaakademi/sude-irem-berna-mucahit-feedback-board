@@ -21,10 +21,6 @@ export default function Home() {
     }
   };
 
-
-
-
-
   // Sıralama işlemi yaptım
   const sortedData = [...data].sort(
     sortValue.includes("upvotes")

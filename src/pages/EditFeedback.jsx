@@ -41,7 +41,6 @@ export default function EditFeedback() {
     console.log(data)
   }
 
-  const { data, setData } = useContext(DataContext);
   return (
     <>
       <div className="edit-feedback-page">
