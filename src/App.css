@@ -249,7 +249,9 @@ table {
 
 .comments-item:last-child .divider{
   display: none;
-}/* berna section start */
+}
+
+/* berna section start */
 
 .roadmap-header, .roadmap-section-container-mobile-tab-header {
   display: flex;
@@ -266,6 +268,15 @@ table {
 }
 
 /* berna section end */
+
+/* mücahit start */
+
+.create-new-feedback {
+  padding: 88px 24px;
+  margin-bottom: 20px;
+}
+
+/* mücahit end */
 
 
 @media only screen and (min-width: 768px) {
