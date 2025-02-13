@@ -1,4 +1,4 @@
-export default function Suggestion(){
+export default function Suggestion({ upvotes, comments, category }){
   return(
     <>
       <div className="suggestion-item">
