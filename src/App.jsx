@@ -7,6 +7,7 @@ import NewFeedback from './pages/NewFeedback.jsx';
 import EditFeedback from './pages/EditFeedback.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 
+
 export const DataContext = createContext(null);
 
 export default function App() {
@@ -17,8 +18,7 @@ export default function App() {
     async function getData() {
       const feedbackData = await fetch('/src/data/feedback-data.json').then(r => r.json());
       setData(feedbackData.productRequests);
-      // console.log(data);
-      
+      console.log(data)
     }
     getData();
   }, [])
@@ -30,7 +30,7 @@ export default function App() {
           <Route path='/' element={<Home />} />
           <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
           <Route path='/new-feedback' element={<NewFeedback />} />
-          <Route path='/edit-feedback' element={<EditFeedback />} />
+          <Route path='/edit-feedback/:feedbackId' element={<EditFeedback />} />
           <Route path='/roadmap' element={<Roadmap />} />
         </Routes>
       </DataContext.Provider>
