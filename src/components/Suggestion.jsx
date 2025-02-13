@@ -1,19 +1,19 @@
-export default function Suggestion({ }){
-  console.log(data);
+export default function Suggestion({ feedBack }){
+
   return(
     <>
       <div className="suggestion-item">
-      <span className="upvotes--mobile">{upvotes}</span>
+      <span className="upvotes">{feedBack?.upvotes}</span>
         <div className="suggestion-item-wrapper">
-          <h2></h2>
-          <p></p>
-          <span className="category">{category}</span>
+          <h2>{feedBack?.title}</h2>
+          <p>{feedBack?.description}</p>
+          <span className="category">{feedBack?.category}</span>
         </div>
         <div className="suggestion-item--mobile">
-          <span className="upvotes--mobile">{upvotes}</span>
-          <span className="comments--mobile"><img src="./images/comments-icon.svg" alt="Comments Icon" /> {comments.length}</span>
+          <span className="upvotes--mobile"> <img src="/images/arrow-up.svg" /> {feedBack?.upvotes}</span>
+          <span className="comments--mobile"><img src="/images/comments-icon.svg" alt="Comments Icon" /> {feedBack?.comments?.length}</span>
         </div>
-        <span className="comments"><img src="./images/comments-icon.svg" alt="Comments Icon" /> {comments.length}</span>
+        <span className="comments"><img src="/images/comments-icon.svg" alt="Comments Icon" /> {feedBack?.comments?.length}</span>
       </div>
     </>
   )
