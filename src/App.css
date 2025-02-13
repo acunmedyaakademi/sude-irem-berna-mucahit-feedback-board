@@ -94,6 +94,12 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--darkest-blue);
+  padding: 18px 24px;
+}
+
+.hamburger-menu-dialog {
+  z-index: 1000;
 }
 
 /* irem end */
