@@ -7,7 +7,7 @@ import NewFeedback from './pages/NewFeedback.jsx';
 import EditFeedback from './pages/EditFeedback.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 
-export const DataContext = createContext();
+export const DataContext = createContext(null);
 
 export default function App() {
 
@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <>
-      <DataContext.Provider value={{ data }}>
+      <DataContext.Provider value={{ data, setData}}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
