@@ -8,9 +8,9 @@ export default function RoadmapStatusSection({ roadmapSectionTitle }) {
   const roadmapSectionData = data?.filter(x => x.status == roadmapSectionTitle);
 
   const titleInfos = {
-    "planned": {"info": "Ideas prioritized for research", "color":"orange"},
-    "in-progress": {"info":"Currently being developed", "color": "purple"},
-    "live": {"info":"Released features", "color": "blue"}
+    "planned": {"info": "Ideas prioritized for research", "color": "#F49F85"},
+    "in-progress": {"info": "Currently being developed", "color": "#AD1FEA"},
+    "live": {"info": "Released features", "color": "#62BCFA"}
   }
 
   return (
@@ -19,7 +19,7 @@ export default function RoadmapStatusSection({ roadmapSectionTitle }) {
         <h3>{roadmapSectionTitle} ({roadmapSectionData.length})</h3>
         <p>{titleInfos[roadmapSectionTitle].title}</p>
         {
-          roadmapSectionData?.map(x => <RoadmapStatusCard x={x} />)
+          roadmapSectionData?.map(x => <RoadmapStatusCard x={x} color={titleInfos[roadmapSectionTitle].color} />)
         }
 
       </div>
