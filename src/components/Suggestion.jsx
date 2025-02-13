@@ -1,11 +1,9 @@
 export default function Suggestion({ feedBack }){
 
-  console.log(feedBack)
-
   return(
     <>
       <div className="suggestion-item">
-      <span className="upvotes--mobile">{feedBack.upvotes}</span>
+        <span className="upvotes">{feedBack.upvotes}</span>
         <div className="suggestion-item-wrapper">
           <h2>{feedBack.title}</h2>
           <p>{feedBack.description}</p>
