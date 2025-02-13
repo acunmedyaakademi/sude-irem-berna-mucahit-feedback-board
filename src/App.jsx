@@ -13,19 +13,20 @@ export const DataContext = createContext(null);
 export default function App() {
 
   const [data, setData] = useState('');
+  const [ currentUser, setCurrentUser ] = useState('');
 
   useEffect(() => {
     async function getData() {
       const feedbackData = await fetch('/src/data/feedback-data.json').then(r => r.json());
       setData(feedbackData.productRequests);
-      console.log(data)
+      setCurrentUser(feedbackData.currentUser);
     }
     getData();
   }, [])
 
   return (
     <>
-      <DataContext.Provider value={{ data, setData}}>
+      <DataContext.Provider value={{ data, setData, currentUser}}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
