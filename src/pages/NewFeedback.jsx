@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../App";
 import { useState } from "react";
+import GoBackBtn from "../components/GoBackBtn";
 
 export default function NewFeedback() {
   const { feedbackId } = useParams();
@@ -23,7 +24,9 @@ export default function NewFeedback() {
   };
   return (
     <>
+    <a href={<GoBackBtn />}>Go Back</a>
       <div className="create-new-feedback">
+        
         <h2>Create New Feedback</h2>
         <form onSubmit={handleSubmit}>
           <div className="create-new-feedback-title">
