@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home.jsx';
@@ -8,6 +8,20 @@ import EditFeedback from './pages/EditFeedback.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 
 export default function App() {
+
+  // const [ data , setData ] = useState([]);
+
+  // useEffect(() => {
+  //   async function getData() {
+  //     const feedbackdata = await fetch('/data/feedback-data.json').then(r => r.json());
+  //     setData(feedbackdata);
+  //     console.log(feedbackdata)
+  //   }
+  //   getData()
+  // },[])
+
+
+
 
   return (
     <>
