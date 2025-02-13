@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home.jsx';
@@ -9,15 +9,28 @@ import Roadmap from './pages/Roadmap.jsx';
 
 export default function App() {
 
+  const [data, setData] = useState('');
+  const DataContext = createContext(null);
+
+  useEffect(() => {
+    async function getData() {
+      const feedbackData = await fetch('/src/data/feedback-data.json').then(r => r.json());
+      setData(feedbackData.productRequests);
+    }
+    getData();
+  }, [])
+
   return (
     <>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
-        <Route path='/new-feedback' element={<NewFeedback />} />
-        <Route path='/edit-feedback' element={<EditFeedback />} />
-        <Route path='/roadmap' element={<Roadmap />} />
-      </Routes>
+      <DataContext.Provider value={data}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
+          <Route path='/new-feedback' element={<NewFeedback />} />
+          <Route path='/edit-feedback' element={<EditFeedback />} />
+          <Route path='/roadmap' element={<Roadmap />} />
+        </Routes>
+      </DataContext.Provider>
     </>
   )
 }
