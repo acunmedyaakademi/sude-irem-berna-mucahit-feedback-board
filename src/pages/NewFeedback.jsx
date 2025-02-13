@@ -13,6 +13,7 @@ export default function NewFeedback() {
     title: "",
     category: "",
     detail: "",
+    comments: []
   });
 
   const handleChange = (e) => {
@@ -22,9 +23,10 @@ export default function NewFeedback() {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  
   return (
     <>
-      <a href={<GoBackBtn />}>Go Back</a>
+      <GoBackBtn />
       <div className="edit-feedback-page">
         <div className="feedback-newpage-main">
           <h2>Create New Feedback</h2>

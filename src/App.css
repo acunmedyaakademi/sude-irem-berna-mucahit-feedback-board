@@ -302,7 +302,6 @@ table {
   letter-spacing: -0.18px;
   text-align: center;
   color: var(--dark-blue);
-  cursor: pointer;
 } 
 
 .suggestion-item .comments,
@@ -1145,43 +1144,51 @@ table {
       transition: all 0.5s;
     }
 
-    /* sude end */  /* berna section start */
-
-  .roadmap-header, .roadmap-section-container-desktop-tablet {
-    max-width: 1110px;
-    margin: auto;
-  }
-
-  .roadmap-header {
-    border-radius: 10px;
-    margin-top: 78px;
-    margin-bottom: 32px;
-  }
-
-  .roadmap-status-section {
-    margin: 7px;
-    width: 350px;
-    height: 272px;
-  }
-
-  .roadmap-status-card {
-
-    h4 a {
-      font-size: 18px;
-      line-height: 26.01px;
-      font-weight: 700;
-    }
-    h4 a:hover {
+    .suggestion-container .suggestion-item-wrapper h2:hover{
+      cursor: pointer;
       color: var(--blue);
+      transition: all 0.5s;
     }
-    p, .roadmap-status {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 23.12px;
+
+    /* sude end */ 
+    
+    /* berna section start */
+
+    .roadmap-header, .roadmap-section-container-desktop-tablet {
+      max-width: 1110px;
+      margin: auto;
     }
-  }
+
+    .roadmap-header {
+      border-radius: 10px;
+      margin-top: 78px;
+      margin-bottom: 32px;
+    }
+
+    .roadmap-status-section {
+      margin: 7px;
+      width: 350px;
+      height: 272px;
+    }
+
+    .roadmap-status-card {
+
+      h4 a {
+        font-size: 18px;
+        line-height: 26.01px;
+        font-weight: 700;
+      }
+      h4 a:hover {
+        color: var(--blue);
+      }
+      p, .roadmap-status {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 23.12px;
+      }
+    }
 
 
 
-  /* berna section end */
+    /* berna section end */
 } 

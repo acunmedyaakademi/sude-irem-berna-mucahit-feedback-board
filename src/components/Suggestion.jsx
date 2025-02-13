@@ -10,7 +10,7 @@ export default function Suggestion({ feedBack }){
         <div className="suggestion-item-wrapper-container">
         <span className="upvotes"><img src="/images/arrow-up.svg" /> <span>{feedBack?.upvotes}</span></span>
           <div className="suggestion-item-wrapper">
-            <h2>{feedBack?.title}</h2>
+            <h2 onClick={() => navigate(`/feedback-details/${feedBack.id}`)}>{feedBack?.title}</h2>
             <p>{feedBack?.description}</p>
             <span className="category">{feedBack?.category?.charAt(0).toUpperCase() + feedBack?.category?.slice(1)}</span>
           </div>
@@ -22,7 +22,7 @@ export default function Suggestion({ feedBack }){
             window.scroll(0, 0);
           }}><img src="/images/comments-icon.svg" alt="Comments Icon" /> {feedBack?.comments?.length}</span>
         </div>
-        <span className="comments" onClick={() => navigate(`/feedback-details/${feedBack.id}`)}><img src="/images/comments-icon.svg" alt="Comments Icon" /> {feedBack?.comments?.length}</span>
+        <span className="comments"><img src="/images/comments-icon.svg" alt="Comments Icon" /> {feedBack?.comments?.length}</span>
       </div>
     </>
   )

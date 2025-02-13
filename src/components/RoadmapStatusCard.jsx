@@ -7,6 +7,7 @@ export default function RoadmapStatusCard({ x, color }) {
   const [currentFeedback, setCurrentFeedback] = useState({})
   const [upvotes, setUpvotes] = useState(null)
   const { data, setData } = useContext(DataContext);
+  
 
   useEffect(() => {
     const feedback = data?.find(y => y.id == x.id)
