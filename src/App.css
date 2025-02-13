@@ -432,6 +432,15 @@ table {
 
 .roadmap-upvotes-btn-pressed {
   background-color: var(--blue);
+  color: var(--white);
+  svg path {
+    stroke: var(--white);
+  }
+}
+
+.roadmap-upvotes-btn-pressed:hover {
+  background-color: var(--blue);
+  opacity: .8;
 }
 
 .add-feedback-btn:hover {

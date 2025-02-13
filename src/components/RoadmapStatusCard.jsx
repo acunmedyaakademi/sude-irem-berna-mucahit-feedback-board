@@ -1,6 +1,25 @@
+import { useContext, useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { DataContext } from "../App";
 
 export default function RoadmapStatusCard({ x, color }) {
+  const [clickedUpvote, setClickedUpvote] = useState(false)
+  const [currentFeedback, setCurrentFeedback] = useState({})
+  const [upvotes, setUpvotes] = useState(null)
+  const { data, setData } = useContext(DataContext);
+
+  useEffect(() => {
+    const feedback = data?.find(y => y.id == x.id)
+    setCurrentFeedback(feedback);
+    setUpvotes(feedback.upvotes)
+  }, [])
+
+  function handleUpvote() {
+    setClickedUpvote(!clickedUpvote)
+    console.log(clickedUpvote);
+    clickedUpvote ? setUpvotes(upvotes - 1) : setUpvotes(upvotes + 1);
+    console.log(upvotes);
+  }
 
   return (
     <>
@@ -17,9 +36,8 @@ export default function RoadmapStatusCard({ x, color }) {
             <Outlet /></h4>
           <p style={{ color: "gray" }}>{x?.description}</p>
           <span className="roadmap-status-category-span">{x?.category}</span>
-          {/* upvotes'u 1 arttır */}
           <div className="roadmap-status-card-reaction">
-            <button className="roadmap-upvotes-btn">{upChevron} {x?.upvotes}</button>
+            <button onClick={handleUpvote} className={clickedUpvote ? "roadmap-upvotes-btn roadmap-upvotes-btn-pressed" : "roadmap-upvotes-btn"}>{upChevron} {upvotes}</button>
             <span className="roadmap-comments">{commentSvg} {x?.comments?.length > 0 ? x?.comments?.length : 0}</span>
           </div>
         </div>
