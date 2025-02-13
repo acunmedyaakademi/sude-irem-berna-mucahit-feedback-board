@@ -10,9 +10,8 @@ export default function Roadmap() {
     "planned": <RoadmapStatusSection roadmapSectionTitle={"planned"} />,
     "in-progress": <RoadmapStatusSection roadmapSectionTitle={"in-progress"} />,
     "live": <RoadmapStatusSection roadmapSectionTitle={"live"} />
-
   }
-  console.log(currentTab)
+  
   return (
     <>
       <div className="roadmap-page">
@@ -22,11 +21,12 @@ export default function Roadmap() {
           <RoadmapStatusSection roadmapSectionTitle={"in-progress"} />
           <RoadmapStatusSection roadmapSectionTitle={"live"} />
         </div>
+        {/* h3'e feedback sayısı eklenecek */}
         <div className="roadmap-section-container-mobile">
           <div className="roadmap-section-container-mobile-tab-header">
-            <h3 onClick={() => setCurrentTab("planned")}>Planned</h3>
-            <h3 onClick={() => setCurrentTab("in-progress")}>In-Progress</h3>
-            <h3 onClick={() => setCurrentTab("live")}>Live</h3>
+            <h3 className={currentTab == "planned" ? "roadmap-selected-tab roadmap-mobile-tab" : "roadmap-mobile-tab"} onClick={() => setCurrentTab("planned")}>Planned</h3>
+            <h3 className={currentTab == "in-progress" ? "roadmap-selected-tab roadmap-mobile-tab" : "roadmap-mobile-tab"} onClick={() => setCurrentTab("in-progress")}>In-Progress</h3>
+            <h3 className={currentTab == "live" ? "roadmap-selected-tab roadmap-mobile-tab" : "roadmap-mobile-tab"} onClick={() => setCurrentTab("live")}>Live</h3>
           </div>
           <div className="roadmap-section-mobile-tab">
             {tabs[currentTab]}
