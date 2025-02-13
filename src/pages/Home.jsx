@@ -6,6 +6,9 @@ export default function Home() {
     <>
     <Link to={`/feedback-details/1`}>id 1</Link>
     <Outlet />
+    <br />
+    <Link to={`/roadmap`}>r</Link>
+    <Outlet />
     </>
   )
 }
