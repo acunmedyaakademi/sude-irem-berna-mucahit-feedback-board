@@ -7,6 +7,7 @@ import NewFeedback from './pages/NewFeedback.jsx';
 import EditFeedback from './pages/EditFeedback.jsx';
 import Roadmap from './pages/Roadmap.jsx';
 
+
 export const DataContext = createContext(null);
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
     async function getData() {
       const feedbackData = await fetch('/src/data/feedback-data.json').then(r => r.json());
       setData(feedbackData.productRequests);
+      console.log(data)
     }
     getData();
   }, [])
