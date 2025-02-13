@@ -1,0 +1,26 @@
+/* berna section start */
+
+.roadmap-header, .roadmap-section-container-mobile-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-section-container-mobile {
+  display: block;
+}
+
+.roadmap-section-container-desktop-tablet {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .roadmap-section-container-mobile {
+    display: none;
+  }
+  
+  .roadmap-section-container-desktop-tablet {
+    display: flex;
+  }
+}
+/* berna section end */
