@@ -53,10 +53,54 @@ export default function Home() {
         {isMenuOpen ? closeMenu : openMenu}
         </button>
       </header>
+      <div className="header-tablet">
+        <div className="header-tablet-first">
+        <div className="header-name">
+          <h1>Frontend Mentor</h1>
+          <h3>Feedback Board</h3>
+        </div>
+        </div>
+        <div className="header-tablet-second">
+        <div className="hamburger-buttons">
+          <div className="all-uı-ux">
+            <button>ALL</button>
+              <button>UI</button>
+              <button>UX</button>
+            </div>
+            <div className="enhancement-bug">
+              <button>Enhancement</button>
+              <button>Bug</button>
+            </div>
+            <button>Feature</button>
+          </div>
+        </div>
+        <div className="header-tablet-third">
+        <div className="hamburger-roadmap">
+          <div className="hamburger-roadmap-title">
+            <h2>Roadmap</h2>
+            <button className="roadmap-view" onClick={() => navigate('/roadmap')}>View</button>
+          </div>
+          <div className="hamburger-roadmap-section">
+            <div className="roadmap-list">
+              <li>Planned</li>
+              <span>2</span>
+            </div>
+            <div className="roadmap-list">
+              <li>In-Progress</li>
+              <span>3</span>
+            </div>
+            <div className="roadmap-list">
+              <li>Live</li>
+              <span>1</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
       <div className="header-container">
         <div className="header-bottom">
           <div className="filter-content">
-            <label htmlFor="sort">Sort by:</label>
+            <label htmlFor="sort">Sort by : </label>
             <select
               className="sort"
               value={sortValue}
@@ -68,7 +112,7 @@ export default function Home() {
               <option value="least-comments">Least Comments</option>
             </select>
           </div>
-          <button onClick={() => navigate('/new-feedback') }>+ Add FeedBack</button>
+          <button className="addFeedBackBtn" onClick={() => navigate('/new-feedback') }>+ Add FeedBack</button>
         </div>
       </div>
       <div className="suggestion-container">
@@ -93,22 +137,35 @@ export default function Home() {
     <dialog ref={dialogRef} className="hamburger-menu-dialog">
         <div className="hamburger-menu-container">
           <div className="hamburger-buttons">
+          <div className="all-uı-ux">
             <button>ALL</button>
-            <button>UI</button>
-            <button>UX</button>
-            <button>Enhancement</button>
-            <button>Bug</button>
+              <button>UI</button>
+              <button>UX</button>
+            </div>
+            <div className="enhancement-bug">
+              <button>Enhancement</button>
+              <button>Bug</button>
+            </div>
             <button>Feature</button>
           </div>
           <div className="hamburger-roadmap">
           <div className="hamburger-roadmap-title">
             <h2>Roadmap</h2>
-            <button onClick={() => navigate('/roadmap')}>view</button>
+            <button className="roadmap-view" onClick={() => navigate('/roadmap')}>View</button>
           </div>
           <div className="hamburger-roadmap-section">
-            <li>Planned</li>
-            <li>In-Progress</li>
-            <li>Live</li>
+            <div className="roadmap-list">
+              <li>Planned</li>
+              <span>2</span>
+            </div>
+            <div className="roadmap-list">
+              <li>In-Progress</li>
+              <span>3</span>
+            </div>
+            <div className="roadmap-list">
+              <li>Live</li>
+              <span>1</span>
+            </div>
           </div>
           </div>
         </div>
