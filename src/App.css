@@ -199,19 +199,19 @@ table {
 .sort {
   background-color: inherit;
   border: none;
-  color: #F2F4FF;
+  color: #f2f4ff;
 }
 
 .suggestion-container {
-  background-color: #F7F8FD;
+  background-color: #f7f8fd;
 }
 
 .hamburger-menu-dialog {
-  position: absolute;  
-  top: 72px; 
-  right: 0;  
+  position: absolute;
+  top: 72px;
+  right: 0;
   height: 100%;
-  background-color: #F7F8FD; 
+  background-color: #f7f8fd;
   padding: 0;
   margin: 0;
   width: 271px;
@@ -237,23 +237,22 @@ table {
     gap: 14px;
     margin-bottom: 14px;
   }
-  
-  button {
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 18.79px;
-  letter-spacing: 0px;
-  background-color: #F2F4FF;
-  border: none;
-  padding: 5px 16px;
-  color: #4661E6;
-  border-radius: 10px;
 
+  button {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18.79px;
+    letter-spacing: 0px;
+    background-color: #f2f4ff;
+    border: none;
+    padding: 5px 16px;
+    color: #4661e6;
+    border-radius: 10px;
   }
 
   button:hover {
-    background-color: #4661E6;
-    color: #F2F4FF;
+    background-color: #4661e6;
+    color: #f2f4ff;
   }
 }
 
@@ -269,11 +268,11 @@ table {
   margin-bottom: 24px;
 
   h2 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26.01px;
-  letter-spacing: -0.25px;
-  color:#3A4374;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26.01px;
+    letter-spacing: -0.25px;
+    color: #3a4374;
   }
   .roadmap-view {
     background-color: inherit;
@@ -283,7 +282,7 @@ table {
     font-size: 13px;
     line-height: 18.79px;
     letter-spacing: 0px;
-    color: #4661E6;
+    color: #4661e6;
   }
 }
 
@@ -293,12 +292,12 @@ table {
   justify-content: space-between;
 
   span {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 23.12px;
-  letter-spacing: 0px;
-  text-align: right;
-  color: #647196;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23.12px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #647196;
   }
 }
 
@@ -308,19 +307,17 @@ table {
     font-size: 16px;
     line-height: 23.12px;
     letter-spacing: 0px;
-    color: #647196
-
-  };
+    color: #647196;
+  }
   li:nth-child(1)::marker {
-    color: #F49F85;
+    color: #f49f85;
   }
   li:nth-child(2)::marker {
-    color: #AD1FEA;
+    color: #ad1fea;
   }
   li:nth-child(3)::marker {
-    color: #62BCFA;
+    color: #62bcfa;
   }
-  
 }
 
 .addFeedBackBtn {
@@ -333,7 +330,6 @@ table {
   font-size: 13px;
   line-height: 18.79px;
   letter-spacing: 0px;
-
 }
 
 label {
@@ -342,7 +338,7 @@ label {
   line-height: 18.79px;
   letter-spacing: 0px;
   text-align: right;
-  color: #F2F4FF;
+  color: #f2f4ff;
 }
 
 .filter-content {
@@ -351,7 +347,6 @@ label {
   line-height: 18.79px;
   letter-spacing: 0px;
   text-align: right;
-
 }
 
 /* irem end */
@@ -467,7 +462,7 @@ label {
   letter-spacing: -0.18px;
   text-align: center;
   color: var(--dark-blue);
-} 
+}
 
 .suggestion-item .comments,
 .suggestion-item .upvotes {
@@ -513,26 +508,26 @@ label {
   display: none;
 }
 
-.comments-item-top{
+.comments-item-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.comments-item-top-wrapper{
+.comments-item-top-wrapper {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.comments-item-top-wrapper img{
+.comments-item-top-wrapper img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.comments-item-top .user-info .name{
+.comments-item-top .user-info .name {
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -540,7 +535,7 @@ label {
   color: var(--dark-blue);
 }
 
-.comments-item-top .user-info .user-name{
+.comments-item-top .user-info .user-name {
   font-weight: 400;
   font-size: 13px;
   line-height: 18.79px;
@@ -548,7 +543,7 @@ label {
   color: var(--text-color);
 }
 
-.comments-item-top button{
+.comments-item-top button {
   font-weight: 600;
   font-size: 13px;
   line-height: 18.79px;
@@ -561,7 +556,7 @@ label {
   padding: 0;
 }
 
-.comments-item-container .comment-content{
+.comments-item-container .comment-content {
   font-weight: 400;
   font-size: 13px;
   line-height: 18.79px;
@@ -569,13 +564,13 @@ label {
   color: var(--text-color);
 }
 
-.reply-input-container{
+.reply-input-container {
   display: flex;
   gap: 16px;
   margin-top: 16px;
 }
 
-.reply-input-container textarea{
+.reply-input-container textarea {
   width: 100%;
   height: 80px;
   background-color: var(--light-gray);
@@ -591,7 +586,7 @@ label {
   resize: none;
 }
 
-.reply-input-container button{
+.reply-input-container button {
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -606,7 +601,7 @@ label {
   height: 40px;
 }
 
-.replies-container{
+.replies-container {
   margin-left: 24px;
   margin-top: 24px;
   display: flex;
@@ -614,7 +609,7 @@ label {
   gap: 24px;
 }
 
-.comment-content span{
+.comment-content span {
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -622,13 +617,13 @@ label {
   color: var(--purple);
 }
 
-.add-comment-input-container{
+.add-comment-input-container {
   background-color: var(--white);
   border-radius: 10px;
   padding: 24px;
 }
 
-.add-comment-input-container h3{
+.add-comment-input-container h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 26.01px;
@@ -637,7 +632,7 @@ label {
   margin-bottom: 24px;
 }
 
-.add-comment-input-container textarea{
+.add-comment-input-container textarea {
   width: 100%;
   height: 80px;
   background-color: var(--light-gray);
@@ -654,21 +649,22 @@ label {
   resize: none;
 }
 
-.reply-input-container textarea:focus, .add-comment-input-container textarea:focus{
+.reply-input-container textarea:focus,
+.add-comment-input-container textarea:focus {
   border: 1px solid var(--blue);
 }
 
-.add-comment-input-container textarea::placeholder{
-  color: #8C92B3;
+.add-comment-input-container textarea::placeholder {
+  color: #8c92b3;
 }
 
-.add-comment-input-container-wrapper{
+.add-comment-input-container-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.add-comment-input-container-wrapper p{
+.add-comment-input-container-wrapper p {
   font-weight: 400;
   font-size: 13px;
   line-height: 18.79px;
@@ -676,7 +672,7 @@ label {
   color: var(--text-color);
 }
 
-.add-comment-input-container-wrapper button{
+.add-comment-input-container-wrapper button {
   background-color: var(--purple);
   border: none;
   outline: none;
@@ -701,7 +697,8 @@ label {
   justify-content: space-between;
 }
 
-.roadmap-header, .roadmap-section-container-mobile-tab-header {
+.roadmap-header,
+.roadmap-section-container-mobile-tab-header {
   padding-inline: 20px;
 }
 
@@ -741,7 +738,6 @@ label {
   justify-content: center;
 }
 
-
 .roadmap-mobile-tab {
   width: 125px;
   height: 100%;
@@ -749,7 +745,7 @@ label {
   align-items: center;
   justify-content: center;
   border-bottom: 4px solid var(--light-gray);
-  color: rgb(58, 67, 116, .4);
+  color: rgb(58, 67, 116, 0.4);
 }
 
 .roadmap-selected-tab {
@@ -787,11 +783,14 @@ label {
   border-radius: 5px;
   background-color: var(--white);
 
-  a, p, .roadmap-status {
+  a,
+  p,
+  .roadmap-status {
     font-size: 13px;
     line-height: 18.79px;
   }
-  .roadmap-status, p {
+  .roadmap-status,
+  p {
     color: var(--text-color);
   }
   a {
@@ -804,14 +803,13 @@ label {
   }
   .roadmap-status {
     text-transform: capitalize;
-    
   }
 }
 
 .roadmap-card-top {
- height: 6px;
- background-color: var(--purple);
- border-radius: 5px 5px 0 0;
+  height: 6px;
+  background-color: var(--purple);
+  border-radius: 5px 5px 0 0;
 }
 
 .roadmap-status-card-content {
@@ -860,16 +858,15 @@ label {
   justify-content: center;
 }
 
-.roadmap-status-category-span, 
+.roadmap-status-category-span,
 .roadmap-upvotes-btn {
   background-color: var(--gray);
   border-radius: 10px;
   font-size: 13px;
-
 }
 
 .roadmap-upvotes-btn:hover {
-  background-color: #CFD7FF;
+  background-color: #cfd7ff;
 }
 
 .roadmap-upvotes-btn-pressed {
@@ -882,11 +879,11 @@ label {
 
 .roadmap-upvotes-btn-pressed:hover {
   background-color: var(--blue);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .add-feedback-btn:hover {
-  background-color: #C75AF6;
+  background-color: #c75af6;
 }
 
 .roadmap-section-container-mobile {
@@ -999,7 +996,8 @@ label {
 @media only screen and (min-width: 768px) {
   /* berna section start */
 
-  .roadmap-header, .roadmap-section-container-desktop-tablet {
+  .roadmap-header,
+  .roadmap-section-container-desktop-tablet {
     max-width: 689px;
     margin: auto;
   }
@@ -1032,67 +1030,66 @@ label {
     display: flex;
   }
 
-
   /* berna section end */
 
   /* sude start */
 
-  .feedback-details-container{
+  .feedback-details-container {
     padding: 56px 40px;
   }
-  
-  .go-back-btn p{
+
+  .go-back-btn p {
     font-weight: 700;
     font-size: 14px;
     line-height: 20.23px;
     letter-spacing: 0px;
   }
-  
-  .edit-feedback-btn{
+
+  .edit-feedback-btn {
     font-weight: 700;
     font-size: 14px;
     line-height: 20.23px;
     letter-spacing: 0px;
     padding: 12.5px 24px;
   }
-  
-  .suggestion-item{
+
+  .suggestion-item {
     padding: 28px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .suggestion-item-wrapper-container{
+  .suggestion-item-wrapper-container {
     display: flex;
     gap: 40px;
   }
-  
-  .suggestion-item-wrapper h2{
+
+  .suggestion-item-wrapper h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 26.01px;
     letter-spacing: -0.25px;
     margin-bottom: 4px;
   }
-  
-  .suggestion-item-wrapper p{
+
+  .suggestion-item-wrapper p {
     font-weight: 400;
     font-size: 16px;
     line-height: 23.12px;
     letter-spacing: 0px;
     margin-bottom: 12px;
   }
-  
-  .suggestion-item-wrapper .category{
+
+  .suggestion-item-wrapper .category {
     margin-bottom: 0;
   }
-  
-  .suggestion-item--mobile{
+
+  .suggestion-item--mobile {
     display: none;
   }
-  
-  .upvotes{
+
+  .upvotes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1103,72 +1100,73 @@ label {
     width: 40px;
   }
 
-  .upvotes span{
+  .upvotes span {
     display: block;
   }
-  
-  .comments{
+
+  .comments {
     gap: 8px;
     font-weight: 700;
     font-size: 16px;
     line-height: 23.12px;
     letter-spacing: -0.22px;
-  } 
-  
-  .suggestion-item .comments, .suggestion-item .upvotes{
+  }
+
+  .suggestion-item .comments,
+  .suggestion-item .upvotes {
     display: inline-flex;
   }
-  
-  .comments-container{
+
+  .comments-container {
     padding: 24px 32px 32px;
   }
-  
-  .comments-container h3{
+
+  .comments-container h3 {
     margin-bottom: 28px;
   }
-  
-  .comments-items-container{
+
+  .comments-items-container {
     gap: 32px;
   }
-  
-  .comments-item .divider{
+
+  .comments-item .divider {
     margin-top: 32px;
   }
 
-  .comments-item-top-wrapper{
+  .comments-item-top-wrapper {
     display: flex;
     align-items: center;
     gap: 32px;
   }
-  
-  .comments-item-top .user-info .name{
+
+  .comments-item-top .user-info .name {
     font-weight: 700;
     font-size: 14px;
     line-height: 20.23px;
     letter-spacing: -0.19px;
   }
-  
-  .comments-item-top .user-info .user-name{
+
+  .comments-item-top .user-info .user-name {
     font-weight: 400;
     font-size: 14px;
     line-height: 20.23px;
     letter-spacing: 0px;
   }
-  
-  .comments-item-container .comment-content{
+
+  .comments-item-container .comment-content {
     font-weight: 400;
     font-size: 15px;
     line-height: 21.68px;
     letter-spacing: 0px;
     margin-left: 72px;
   }
-  
-  .reply-input-container{
+
+  .reply-input-container {
     margin-left: 72px;
     margin-top: 24px;
   }
-  
-  .reply-input-container button{
+
+  .reply-input-container button {
     font-weight: 700;
     font-size: 14px;
     line-height: 20.23px;
@@ -1176,40 +1174,40 @@ label {
     padding: 12.5px 24px;
     height: 44px;
   }
-  
-  .replies-container{
+
+  .replies-container {
     margin-left: 45px;
     margin-top: 32px;
     gap: 17px;
   }
-  
-  .comment-content span{
+
+  .comment-content span {
     font-weight: 700;
     font-size: 15px;
     line-height: 21.68px;
     letter-spacing: 0px;
   }
-  
-  .add-comment-input-container{
+
+  .add-comment-input-container {
     padding: 24px 32px 32px;
   }
-  
-  .add-comment-input-container textarea{
+
+  .add-comment-input-container textarea {
     font-weight: 400;
     font-size: 15px;
     line-height: 21.68px;
     letter-spacing: 0px;
     padding: 16px 24px;
   }
-  
-  .add-comment-input-container-wrapper p{
+
+  .add-comment-input-container-wrapper p {
     font-weight: 400;
     font-size: 15px;
     line-height: 21.68px;
     letter-spacing: 0px;
   }
-  
-  .add-comment-input-container-wrapper button{
+
+  .add-comment-input-container-wrapper button {
     padding: 12px 24px;
     font-weight: 700;
     font-size: 14px;
@@ -1283,7 +1281,13 @@ label {
   }
 
   .header-tablet-first {
-    background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background: radial-gradient(
+        128.88% 128.88% at 103.9% -10.39%,
+        #e84d70 0%,
+        #a337f6 53.09%,
+        #28a7ed 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     padding-inline: 24px 40px;
     border-radius: 10px;
     width: 100%;
@@ -1305,13 +1309,11 @@ label {
       letter-spacing: 0px;
       opacity: 0.75;
       color: var(--white);
-
     }
   }
 
   .header-tablet-second {
     width: 100%;
-
   }
 
   .hamburger-buttons {
@@ -1332,84 +1334,119 @@ label {
   /* irem section */
 }
 
-@media only screen and (min-width: 1280px){
-    /* sude start */
+@media only screen and (min-width: 1280px) {
+  /* sude start */
 
-    .feedback-details-container{
-      padding: 80px 0;
-      width: 730px;
-      margin: 0 auto;    
-    }
-    
-    .comments-container{
-      padding: 24px 32px 48px;
-    }
-    
-    .reply-input-container button:hover, .add-comment-input-container button:hover{
-      background-color: #C75AF6;
-      transition: all 0.5s;
-    }
+  .feedback-details-container {
+    padding: 80px 0;
+    width: 730px;
+    margin: 0 auto;
+  }
 
-    .comments-item-top button:hover, .go-back-btn:hover{
-      text-decoration: underline;
-      transition: all 0.5s;
-    }
+  .comments-container {
+    padding: 24px 32px 48px;
+  }
 
-    .edit-feedback-btn:hover{
-      background-color: #7C91F9;
-      transition: all 0.5s;
-    }
+  .reply-input-container button:hover,
+  .add-comment-input-container button:hover {
+    background-color: #c75af6;
+    transition: all 0.5s;
+  }
 
-    .upvotes:hover{
-      background-color: #CFD7FF;
-      transition: all 0.5s;
-    }
+  .comments-item-top button:hover,
+  .go-back-btn:hover {
+    text-decoration: underline;
+    transition: all 0.5s;
+  }
 
-    .suggestion-container .suggestion-item-wrapper h2:hover{
-      cursor: pointer;
+  .edit-feedback-btn:hover {
+    background-color: #7c91f9;
+    transition: all 0.5s;
+  }
+
+  .upvotes:hover {
+    background-color: #cfd7ff;
+    transition: all 0.5s;
+  }
+
+  .suggestion-container .suggestion-item-wrapper h2:hover {
+    cursor: pointer;
+    color: var(--blue);
+    transition: all 0.5s;
+  }
+
+  /* sude end */
+
+  /* berna section start */
+
+  .roadmap-header,
+  .roadmap-section-container-desktop-tablet {
+    max-width: 1110px;
+    margin: auto;
+  }
+
+  .roadmap-header {
+    border-radius: 10px;
+    margin-top: 78px;
+    margin-bottom: 32px;
+  }
+
+  .roadmap-status-section {
+    margin: 7px;
+    width: 350px;
+    height: 272px;
+  }
+
+  .roadmap-status-card {
+    h4 a {
+      font-size: 18px;
+      line-height: 26.01px;
+      font-weight: 700;
+    }
+    h4 a:hover {
       color: var(--blue);
-      transition: all 0.5s;
     }
-
-    /* sude end */ 
-    
-    /* berna section start */
-
-    .roadmap-header, .roadmap-section-container-desktop-tablet {
-      max-width: 1110px;
-      margin: auto;
+    p,
+    .roadmap-status {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.12px;
     }
+  }
 
-    .roadmap-header {
-      border-radius: 10px;
-      margin-top: 78px;
-      margin-bottom: 32px;
-    }
+  /* berna section end */
 
-    .roadmap-status-section {
-      margin: 7px;
-      width: 350px;
-      height: 272px;
-    }
-
-    .roadmap-status-card {
-
-      h4 a {
-        font-size: 18px;
-        line-height: 26.01px;
-        font-weight: 700;
-      }
-      h4 a:hover {
-        color: var(--blue);
-      }
-      p, .roadmap-status {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 23.12px;
-      }
-    }
-
-
-
-    /* berna section end */
-} 
+  /* MUCAHIT START*/
+  .edit-feedback-page {
+    margin: 180px 450px;
+  }
+  .feedback-newpage-main {
+    padding: 0 42px;
+  }
+  .feedback-newpage-main h2 {
+    padding-top: 52px;
+    font-size: 24x;
+    line-height: 34.68px;
+    letter-spacing: -0.33px;
+    margin-bottom: 40px;
+  }
+  .edit-feedback-form-cont h3 {
+    font-size: 14px;
+    line-height: 20.23px;
+    letter-spacing: -0.19px;
+  }
+  .edit-feedback-form-cont p {
+    font-size: 14px;
+    line-height: 20.23px;
+  }
+  .edit-feedback-form-cont select {
+    font-size: 15px;
+    line-height: 21.68px;
+    padding-left: 24px;
+  }
+  .edit-feedback-form-cont textarea {
+    width: 100%;
+    height: 96px;
+    margin-bottom: 32px;
+  }
+}
