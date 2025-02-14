@@ -16,6 +16,7 @@ export default function EditFeedback() {
   useEffect(() => {
     if (data) {
       const foundFeedback = data.find(x => x.id == feedbackId);
+      console.log(foundFeedback);
       setCurrentFeedback(foundFeedback);
       if (foundFeedback) {
         setSelectedCategory(foundFeedback.category); 
@@ -55,21 +56,21 @@ export default function EditFeedback() {
   return (
     <>
       <div className="edit-feedback-page">
-        <GoBackBtn />
+        <GoBackBtn url={`/feedback-details/${feedbackId}`} />
         <div className="edit-feedback-main-cont">
           <img src="/images/edit-icon.svg" alt="Edit Icon" />
           <h2>Editing ‘{currentFeedback?.title}’</h2>
           <div className="edit-feedback-form-cont">
             <form onSubmit={handleEditFormSubmit}>
               <input type="text" name="title" defaultValue={currentFeedback?.title} />
-              <select name="category" value={selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} onChange={(e) => setSelectedCategory(e.target.value)}>
+              <select name="category" value={(selectedCategory || '').charAt(0).toUpperCase() + (selectedCategory || '').slice(1)} onChange={(e) => setSelectedCategory(e.target.value)}>
                 {categories.map((x) => (
                   <option key={x} value={x}>
                     {x}
                   </option>
                 ))}
               </select>
-              <select name="status" value={selectedStatus.charAt(0).toUpperCase() + selectedStatus.slice(1)} onChange={(e) => setSelectedStatus(e.target.value)}>
+              <select name="status" value={(selectedStatus || '').charAt(0).toUpperCase() + (selectedStatus || '').slice(1)} onChange={(e) => setSelectedStatus(e.target.value)}>
                 {
                   statuses.map(x =>
                     <option key={x} value={x}>

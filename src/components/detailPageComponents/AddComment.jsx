@@ -15,7 +15,7 @@ export default function AddComment({ comments, setComments, currentUser }){
       setComments([
         ...comments, 
         {
-          id: 15,
+          id: crypto.randomUUID(),
           content: inputValue,
           user: currentUser
         }

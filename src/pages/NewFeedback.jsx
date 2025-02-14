@@ -5,11 +5,14 @@ import { useState } from "react";
 import GoBackBtn from "../components/GoBackBtn";
 
 export default function NewFeedback() {
+  const { data, setData } = useContext(DataContext);
   const navigate = useNavigate();
   const [feedback, setFeedback] = useState({
+    id: crypto.randomUUID(),
     title: "",
     category: "",
     detail: "",
+    upvotes: 0,
     comments: [],
   });
 
@@ -19,15 +22,24 @@ export default function NewFeedback() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newFeedBack = {
+      id: Number(data[data.length - 1].id) + 1,
+      title: e.target.title.value,
+      category: e.target.category.value.toLowerCase(),
+      description: e.target.description.value,
+      upvotes: 0,
+      comments: [],
+    }
 
-    console.log("Gönderilen Veri:", feedback);
+    setFeedback(newFeedBack);
+    setData([...data, newFeedBack]);
 
-    navigate("/home", { state: feedback });
+    navigate("/", { state: feedback });
   };
 
   return (
     <>
-      <GoBackBtn />
+      <GoBackBtn url={'/'} />
       <div className="edit-feedback-page">
         <div className="feedback-newpage-main">
           <h2>Create New Feedback</h2>
@@ -65,7 +77,7 @@ export default function NewFeedback() {
                   added, etc.
                 </p>
                 <textarea
-                  name="newfeedback-message"
+                  name="description"
                   onChange={handleChange}
                 ></textarea>
               </div>

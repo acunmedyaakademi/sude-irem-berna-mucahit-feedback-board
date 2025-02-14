@@ -1,7 +1,11 @@
-export default function GoBackBtn(){
+import { useNavigate } from "react-router-dom";
+
+export default function GoBackBtn({ url }){
+
+  const navigate = useNavigate();
 
   function handleClick(){
-    window.history.back();
+    navigate(url);
   }
 
   return(

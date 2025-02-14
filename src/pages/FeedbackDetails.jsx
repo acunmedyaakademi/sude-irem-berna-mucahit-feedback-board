@@ -20,7 +20,7 @@ export default function FeedbackDetails() {
   return (
     <div className="feedback-details-container">
       <div className="detail-buttons-container">
-        <GoBackBtn />
+        <GoBackBtn url={'/'} />
         <EditFeedbackBtn navigate={navigate} feedbackId={feedbackId} />
       </div>
       <Suggestion feedBack={selectedFeedback} />
