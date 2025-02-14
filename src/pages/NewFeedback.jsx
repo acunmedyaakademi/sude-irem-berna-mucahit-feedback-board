@@ -39,9 +39,10 @@ export default function NewFeedback() {
 
   return (
     <>
-      <GoBackBtn url={'/'} />
       <div className="edit-feedback-page">
+        <GoBackBtn url={'/'} />
         <div className="feedback-newpage-main">
+          <img src="/images/new-feedback-icon.svg" alt="Icon" />
           <h2>Create New Feedback</h2>
           <form onSubmit={handleSubmit}>
             <div className="feedback-newpage-main-form">
@@ -86,7 +87,7 @@ export default function NewFeedback() {
                   Add Feedback
                 </button>
                 <button
-                  className="feedback-btn"
+                  className="feedback-btn feedback-btn--new"
                   onClick={() =>
                     setFeedback({ title: "", category: "Feature", detail: "" })
                   }

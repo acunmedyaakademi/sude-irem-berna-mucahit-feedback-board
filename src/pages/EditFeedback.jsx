@@ -57,7 +57,7 @@ export default function EditFeedback() {
     <>
       <div className="edit-feedback-page">
         <GoBackBtn url={`/feedback-details/${feedbackId}`} />
-        <div className="edit-feedback-main-cont">
+        <div className="feedback-newpage-main">
           <img src="/images/edit-icon.svg" alt="Edit Icon" />
           <h2>Editing ‘{currentFeedback?.title}’</h2>
           <div className="edit-feedback-form-cont">
@@ -80,10 +80,10 @@ export default function EditFeedback() {
               </select>
               <textarea name="description" defaultValue={currentFeedback?.description} rows="4"></textarea>
               <div className="edit-feedback-btns-container">
-                <button onClick={handleDelete} type="button" className="delete-btn">Delete</button>
+                <button className="addfeedback-btn" type="submit">Save Changes</button>
                 <Link className="feedback-btn" to={`/feedback-details/${feedbackId}`}>Cancel</Link>
                 <Outlet />
-                <button type="submit">Save Changes</button>
+                <button onClick={handleDelete} type="button" className="delete-btn">Delete</button>
               </div>
             </form>
           </div>

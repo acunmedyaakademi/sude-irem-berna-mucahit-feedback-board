@@ -931,14 +931,24 @@ label {
 /* mücahit start */
 
 .edit-feedback-page {
-  margin: 108px 24px;
+  margin: 34px 24px;
+}
+.edit-feedback-page .go-back-btn{
+  margin-bottom: 55px;
 }
 .feedback-newpage-main {
-  padding: 0 24px;
+  padding: 24px 24px;
   background-color: var(--white);
+  border-radius: 10px;
+  position: relative;
+}
+.feedback-newpage-main img{
+  position: absolute;
+  top: -20px;
+  left: 24px;
 }
 .feedback-newpage-main h2 {
-  padding-top: 44px;
+  padding-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26.01px;
@@ -964,11 +974,13 @@ label {
 }
 .edit-feedback-form-cont input {
   background-color: var(--light-gray);
-  border: none;
+  border: 1px solid var(--light-gray);
   width: 100%;
   height: 48px;
   border-radius: 5px;
   margin-bottom: 24px;
+  padding: 15px 16px;
+  outline: none;
 }
 .edit-feedback-form-cont select {
   background-color: var(--light-gray);
@@ -983,16 +995,22 @@ label {
   letter-spacing: 0px;
   padding-left: 16px;
   color: var(--dark-blue);
+  outline: none;
 }
 .edit-feedback-form-cont textarea {
   width: 100%;
   height: 120px;
   background-color: var(--light-gray);
-  border: none;
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
   margin-bottom: 40px;
+  padding: 16px 24px 16px 16px;
+  outline: none;
 }
-.edit-feedback-btns-container button {
+.edit-feedback-form-cont textarea:focus, .edit-feedback-form-cont input:focus{
+  border: 1px solid var(--blue);
+}
+.edit-feedback-btns-container button, .feedback-btn {
   width: 100%;
   height: 40px;
   display: flex;
@@ -1000,9 +1018,24 @@ label {
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18.79px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-decoration: none;
 }
-.feedback-newpage-main-form {
-  padding-bottom: 24px;
+
+.feedback-btn.feedback-btn--new{
+  margin-bottom: 0;
+}
+.edit-feedback-btns-container button.delete-btn{
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 .addfeedback-btn {
   color: var(--gray);
@@ -1317,8 +1350,7 @@ label {
         #e84d70 0%,
         #a337f6 53.09%,
         #28a7ed 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      );
     padding-inline: 24px 40px;
     border-radius: 10px;
     width: 100%;
