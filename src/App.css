@@ -723,8 +723,13 @@ label {
 
 /* berna section start */
 
-.roadmap-header,
-.roadmap-section-container-mobile-tab-header {
+.roadmap-header, .roadmap-section-container-mobile-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-header, .roadmap-section-container-mobile-tab-header {
   padding-inline: 20px;
 }
 
@@ -764,6 +769,7 @@ label {
   justify-content: center;
 }
 
+
 .roadmap-mobile-tab {
   width: 125px;
   height: 100%;
@@ -771,7 +777,7 @@ label {
   align-items: center;
   justify-content: center;
   border-bottom: 4px solid var(--light-gray);
-  color: rgb(58, 67, 116, 0.4);
+  color: rgb(58, 67, 116, .4);
 }
 
 .roadmap-selected-tab {
@@ -809,14 +815,11 @@ label {
   border-radius: 5px;
   background-color: var(--white);
 
-  a,
-  p,
-  .roadmap-status {
+  a, p, .roadmap-status {
     font-size: 13px;
     line-height: 18.79px;
   }
-  .roadmap-status,
-  p {
+  .roadmap-status, p {
     color: var(--text-color);
   }
   a {
@@ -829,13 +832,14 @@ label {
   }
   .roadmap-status {
     text-transform: capitalize;
+    
   }
 }
 
 .roadmap-card-top {
-  height: 6px;
-  background-color: var(--purple);
-  border-radius: 5px 5px 0 0;
+ height: 6px;
+ background-color: var(--purple);
+ border-radius: 5px 5px 0 0;
 }
 
 .roadmap-status-card-content {
@@ -884,15 +888,16 @@ label {
   justify-content: center;
 }
 
-.roadmap-status-category-span,
+.roadmap-status-category-span, 
 .roadmap-upvotes-btn {
   background-color: var(--gray);
   border-radius: 10px;
   font-size: 13px;
+
 }
 
 .roadmap-upvotes-btn:hover {
-  background-color: #cfd7ff;
+  background-color: #CFD7FF;
 }
 
 .roadmap-upvotes-btn-pressed {
@@ -905,11 +910,11 @@ label {
 
 .roadmap-upvotes-btn-pressed:hover {
   background-color: var(--blue);
-  opacity: 0.8;
+  opacity: .8;
 }
 
 .add-feedback-btn:hover {
-  background-color: #c75af6;
+  background-color: #C75AF6;
 }
 
 .roadmap-section-container-mobile {
@@ -921,6 +926,7 @@ label {
 }
 
 /* berna section end */
+
 
 /* mücahit start */
 
@@ -1019,10 +1025,9 @@ label {
 /* mücahit end */
 
 @media only screen and (min-width: 768px) {
-  /* berna section start */
+   /* berna section start */
 
-  .roadmap-header,
-  .roadmap-section-container-desktop-tablet {
+   .roadmap-header, .roadmap-section-container-desktop-tablet {
     max-width: 689px;
     margin: auto;
   }
@@ -1050,10 +1055,11 @@ label {
   .roadmap-section-container-mobile {
     display: none;
   }
-
+  
   .roadmap-section-container-desktop-tablet {
     display: flex;
   }
+
 
   /* berna section end */
 
@@ -1433,8 +1439,7 @@ label {
 
   /* berna section start */
 
-  .roadmap-header,
-  .roadmap-section-container-desktop-tablet {
+  .roadmap-header, .roadmap-section-container-desktop-tablet {
     max-width: 1110px;
     margin: auto;
   }
@@ -1452,6 +1457,7 @@ label {
   }
 
   .roadmap-status-card {
+
     h4 a {
       font-size: 18px;
       line-height: 26.01px;
@@ -1460,8 +1466,7 @@ label {
     h4 a:hover {
       color: var(--blue);
     }
-    p,
-    .roadmap-status {
+    p, .roadmap-status {
       font-size: 16px;
       font-weight: 400;
       line-height: 23.12px;

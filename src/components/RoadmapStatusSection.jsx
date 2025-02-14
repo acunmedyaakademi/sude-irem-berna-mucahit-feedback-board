@@ -19,7 +19,7 @@ export default function RoadmapStatusSection({ roadmapSectionTitle }) {
         <h3>{roadmapSectionTitle} ({roadmapSectionData.length})</h3>
         <p>{titleInfos[roadmapSectionTitle].title}</p>
         {
-          roadmapSectionData?.map(x => <RoadmapStatusCard x={x} color={titleInfos[roadmapSectionTitle].color} />)
+          roadmapSectionData?.map(x => <RoadmapStatusCard x={x} key={x.id} color={titleInfos[roadmapSectionTitle].color} />)
         }
 
       </div>
