@@ -147,6 +147,10 @@ table {
 
 /* irem start */
 
+.home-container{
+  margin-bottom: 55px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -200,6 +204,7 @@ table {
   background-color: inherit;
   border: none;
   color: #f2f4ff;
+  cursor: pointer;
 }
 
 .suggestion-container {
@@ -247,12 +252,49 @@ table {
     padding: 5px 16px;
     color: #4661e6;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   button:hover {
     background-color: #4661e6;
     color: #f2f4ff;
+    transition: all 0.5s;
   }
+}
+
+.empty-feedback-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 76px 25px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.empty-content img {
+  margin-bottom: 39px;
+}
+
+.empty-content h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26.01px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  color: #3a4374;
+  margin-bottom: 14px;
+}
+
+.empty-content p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18.79px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #647196;
+  margin-bottom: 24px;
 }
 
 .hamburger-roadmap {
@@ -276,12 +318,16 @@ table {
   .roadmap-view {
     background-color: inherit;
     border: none;
-    text-decoration: underline;
     font-weight: 600;
     font-size: 13px;
     line-height: 18.79px;
     letter-spacing: 0px;
     color: #4661e6;
+    cursor: pointer;
+  }
+  .roadmap-view:hover{
+    text-decoration: underline;
+    transition: all 0.5s;
   }
 }
 
@@ -301,21 +347,21 @@ table {
 }
 
 .hamburger-roadmap-section {
+  .roadmap-list:nth-child(1) li::marker{
+    color: #f49f85;
+  }
+  .roadmap-list:nth-child(2) li::marker{
+    color: #ad1fea;
+  }
+  .roadmap-list:nth-child(3) li::marker{
+    color: #62bcfa;
+  }
   li {
     font-weight: 400;
     font-size: 16px;
     line-height: 23.12px;
     letter-spacing: 0px;
     color: #647196;
-  }
-  li:nth-child(1)::marker {
-    color: #f49f85;
-  }
-  li:nth-child(2)::marker {
-    color: #ad1fea;
-  }
-  li:nth-child(3)::marker {
-    color: #62bcfa;
   }
 }
 
@@ -329,6 +375,7 @@ table {
   font-size: 13px;
   line-height: 18.79px;
   letter-spacing: 0px;
+  cursor: pointer;
 }
 
 label {
@@ -480,6 +527,7 @@ label {
   background-color: var(--gray);
   border-radius: 10px;
   padding: 6px 13px 7px 16px;
+  cursor: pointer;
 }
 
 .suggestion-item--mobile .comments--mobile,
@@ -1280,7 +1328,8 @@ label {
   /* sude end */
   /* mucahit baslangic */
   .edit-feedback-page {
-    margin: 144px 114px;
+    width: 540px;
+    margin: 56px auto;
   }
   .feedback-newpage-main {
     padding: 0 42px;
@@ -1336,6 +1385,9 @@ label {
   }
 
   /* irem section */
+  .home-container{
+    margin-bottom: 113px;
+  }
   .header-tablet {
     display: flex;
     margin: 56px 40px 40px 39px;
@@ -1394,33 +1446,33 @@ label {
   .header-bottom {
     margin-bottom: 24px;
     margin-inline: 40px;
+    border-radius: 10px;
   }
-  
+
   .suggestion-container {
     padding-inline: 40px;
   }
-  
+
   .suggestion-img {
     display: flex;
     align-items: center;
     gap: 16px;
   }
-  
+
   .suggestion-img h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 26.01px;
     letter-spacing: -0.25px;
     color: var(--white);
-
   }
-  
+
   .filter-content {
     display: flex;
     gap: 38px;
     align-items: center;
   }
-  
+
   /* irem section */
 }
 
@@ -1462,6 +1514,11 @@ label {
   .suggestion-container .suggestion-item-wrapper h2:hover {
     cursor: pointer;
     color: var(--blue);
+    transition: all 0.5s;
+  }
+
+  .addFeedBackBtn:hover{
+    background-color: #C75AF6;
     transition: all 0.5s;
   }
 
@@ -1507,11 +1564,10 @@ label {
 
   /* MUCAHIT START*/
   .edit-feedback-page {
-    margin: 180px 450px;
+    margin: 92px auto;
   }
   .feedback-newpage-main {
     padding: 0 42px;
-    
   }
   .feedback-newpage-main h2 {
     padding-top: 52px;
@@ -1539,15 +1595,43 @@ label {
     height: 96px;
     margin-bottom: 32px;
   }
+  .edit-feedback-btns-container.edit-page{
+    justify-content: space-between;
+  }
+  .edit-feedback-btns-container.edit-page .edit-feedback-btns-container-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+  .edit-feedback-btns-container button{
+    margin-bottom: 0;
+  }
+  .edit-feedback-btns-container.edit-page button, .edit-feedback-btns-container.edit-page .feedback-btn{
+    width: inherit;
+    padding: 11.5px 24px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20.23px;
+    letter-spacing: 0px;
+    height: 44px;
+  }
+  .feedback-newpage-main{
+    padding-bottom: 40px;
+  }
+  .feedback-newpage-main-form {
+    padding-bottom: 0;
+  }
+
+  /* mücahit end */
   /* irem section */
 
   .home-container {
     display: flex;
     gap: 30px;
-    margin: 0 auto;
+    margin: 94px auto;
     width: 1110px;
     justify-content: center;
-    margin-top: 94px;
   }
 
   .header-tablet {
@@ -1570,8 +1654,43 @@ label {
   .suggestion-container {
     margin-inline: 0;
     padding-inline: 0;
+    width: 825px;
+  }
+
+  .empty-feedback-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 825px;
+    padding: 111px 206px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .empty-content img {
+    margin-bottom: 53px;
+  }
+
+  .empty-content h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34.68px;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #3a4374;
+    margin-bottom: 16px;
+  }
+
+  .empty-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23.12px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #647196;
+    margin-bottom: 48px;
   }
   /* irem section */
-
-
 }

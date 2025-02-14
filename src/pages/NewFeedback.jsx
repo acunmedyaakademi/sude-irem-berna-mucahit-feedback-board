@@ -27,14 +27,17 @@ export default function NewFeedback() {
       title: e.target.title.value,
       category: e.target.category.value.toLowerCase(),
       description: e.target.description.value,
+      status: 'In-Progress',
       upvotes: 0,
       comments: [],
     }
 
     setFeedback(newFeedBack);
-    setData([...data, newFeedBack]);
+    if(e.target.title.value.trim() !== '' || e.target.description.value.trim() !== ''){
+      setData([...data, newFeedBack]);
+      navigate("/", { state: feedback });
+    }
 
-    navigate("/", { state: feedback });
   };
 
   return (
@@ -88,8 +91,10 @@ export default function NewFeedback() {
                 </button>
                 <button
                   className="feedback-btn feedback-btn--new"
-                  onClick={() =>
+                  onClick={() =>{
+                    navigate('/');
                     setFeedback({ title: "", category: "Feature", detail: "" })
+                  }
                   }
                 >
                   Cancel

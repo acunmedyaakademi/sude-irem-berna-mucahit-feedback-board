@@ -5,6 +5,7 @@ import RoadmapStatusCard from "./RoadmapStatusCard";
 export default function RoadmapStatusSection({ roadmapSectionTitle }) {
   const { data } = useContext(DataContext);
 
+
   const roadmapSectionData = data?.filter(x => x.status == roadmapSectionTitle);
 
   const titleInfos = {

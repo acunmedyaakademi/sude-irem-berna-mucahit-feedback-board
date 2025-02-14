@@ -42,8 +42,10 @@ export default function EditFeedback() {
     };
 
     const updatedData = data.map(feedback => feedback.id == currentFeedback.id ? updatedFeedback : feedback);
-    setData(updatedData);
-    navigate(`/feedback-details/${currentFeedback.id}`);
+    if(formObj.title.trim() !== '' || formObj.description.trim() !== ''){
+      setData(updatedData);
+      navigate(`/feedback-details/${currentFeedback.id}`);
+    }
   }
 
   function handleDelete() {
@@ -79,10 +81,12 @@ export default function EditFeedback() {
                 }
               </select>
               <textarea name="description" defaultValue={currentFeedback?.description} rows="4"></textarea>
-              <div className="edit-feedback-btns-container">
-                <button className="addfeedback-btn" type="submit">Save Changes</button>
-                <Link className="feedback-btn" to={`/feedback-details/${feedbackId}`}>Cancel</Link>
-                <Outlet />
+              <div className="edit-feedback-btns-container edit-page">
+                <div className="edit-feedback-btns-container-wrapper">
+                  <button className="addfeedback-btn" type="submit">Save Changes</button>
+                  <Link className="feedback-btn" to={`/feedback-details/${feedbackId}`}>Cancel</Link>
+                  <Outlet />
+                </div>
                 <button onClick={handleDelete} type="button" className="delete-btn">Delete</button>
               </div>
             </form>
