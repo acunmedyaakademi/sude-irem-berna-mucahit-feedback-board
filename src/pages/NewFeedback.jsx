@@ -1,19 +1,16 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../App";
 import { useState } from "react";
 import GoBackBtn from "../components/GoBackBtn";
 
 export default function NewFeedback() {
-  const { feedbackId } = useParams();
-
-  const { data, setData } = useContext(DataContext);
-
+  const navigate = useNavigate();
   const [feedback, setFeedback] = useState({
     title: "",
     category: "",
     detail: "",
-    comments: []
+    comments: [],
   });
 
   const handleChange = (e) => {
@@ -22,8 +19,12 @@ export default function NewFeedback() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    console.log("Gönderilen Veri:", feedback);
+
+    navigate("/home", { state: feedback });
   };
-  
+
   return (
     <>
       <GoBackBtn />
@@ -69,7 +70,9 @@ export default function NewFeedback() {
                 ></textarea>
               </div>
               <div className="edit-feedback-btns-container">
-                <button className="addfeedback-btn">Add Feedback</button>
+                <button type="submit" className="addfeedback-btn">
+                  Add Feedback
+                </button>
                 <button
                   className="feedback-btn"
                   onClick={() =>

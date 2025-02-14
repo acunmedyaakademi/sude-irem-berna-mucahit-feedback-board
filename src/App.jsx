@@ -28,7 +28,7 @@ export default function App() {
     <>
       <DataContext.Provider value={{ data, setData, currentUser}}>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
           <Route path={'/feedback-details/:feedbackId'} element={<FeedbackDetails />} />
           <Route path='/new-feedback' element={<NewFeedback />} />
           <Route path='/edit-feedback/:feedbackId' element={<EditFeedback />} />

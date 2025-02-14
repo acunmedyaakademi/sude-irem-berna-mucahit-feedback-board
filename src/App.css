@@ -901,8 +901,9 @@ label {
 .edit-feedback-page {
   margin: 108px 24px;
 }
-.feedback-newpage-main-cont {
+.feedback-newpage-main {
   padding: 0 24px;
+  background-color: var(--white);
 }
 .feedback-newpage-main h2 {
   padding-top: 44px;
@@ -1420,6 +1421,7 @@ label {
   }
   .feedback-newpage-main {
     padding: 0 42px;
+    
   }
   .feedback-newpage-main h2 {
     padding-top: 52px;

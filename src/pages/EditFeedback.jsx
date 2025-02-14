@@ -38,7 +38,7 @@ export default function EditFeedback() {
 
   function handleDelete() {
     setData(data.filter(x => x.id != feedbackId))
-    navigate("/")
+    navigate("/home")
     console.log(data)
   }
 
