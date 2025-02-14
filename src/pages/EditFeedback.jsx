@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, Outlet, useNavigate, useParams } from "react-router-dom"
 import { DataContext } from "../App.jsx"
+import GoBackBtn from "../components/GoBackBtn.jsx";
 
 // id
 export default function EditFeedback() {
@@ -41,31 +42,35 @@ export default function EditFeedback() {
     console.log(data)
   }
 
+  console.log(currentFeedback)
+
+
   return (
     <>
       <div className="edit-feedback-page">
-        <Link to={`/feedback-details/${feedbackId}`}>Go back</Link>
+        <GoBackBtn />
         <div className="edit-feedback-main-cont">
+          <img src="/images/edit-icon.svg" alt="Edit Icon" />
           <h2>Editing ‘{currentFeedback?.title}’</h2>
           <div className="edit-feedback-form-cont">
             <form onSubmit={handleEditFormSubmit}>
               <input type="text" name="title" defaultValue={currentFeedback?.title} />
-              <select name="category" defaultValue={currentFeedback?.category || categories[0]}>
+              <select name="category">
                 {categories.map((x) => (
-                  <option key={x} value={x}>
+                  <option key={x} value={x} selected={currentFeedback?.category == x.toLowerCase()}>
                     {x}
                   </option>
                 ))}
               </select>
-              <select name="status" defaultValue={currentFeedback?.category || categories[0]}>
+              <select name="status">
                 {
                   statuses.map(x =>
-                    <option key={x} value={x}>
+                    <option key={x} value={x} selected={currentFeedback?.status == x.toLowerCase()}>
                       {x}
                     </option>)
                 }
               </select>
-              <input type="text" name="description" defaultValue={currentFeedback?.description} />
+              <textarea name="description" defaultValue={currentFeedback?.description} rows="4"></textarea>
               <div className="edit-feedback-btns-container">
                 <button onClick={handleDelete} type="button" className="delete-btn">Delete</button>
                 <Link className="feedback-btn" to={`/feedback-details/${feedbackId}`}>Cancel</Link>

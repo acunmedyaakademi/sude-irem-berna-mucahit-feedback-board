@@ -900,10 +900,8 @@ label {
 
 .edit-feedback-page {
   margin: 108px 24px;
-  background-color: var(--white);
-  border-radius: 10px;
 }
-.feedback-newpage-main {
+.feedback-newpage-main-cont {
   padding: 0 24px;
 }
 .feedback-newpage-main h2 {
