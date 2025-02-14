@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     async function getData() {
-      const feedbackData = await fetch('/src/data/feedback-data.json').then(r => r.json());
+      const feedbackData = await fetch('/data/feedback-data.json').then(r => r.json());
       setData(feedbackData.productRequests);
       setCurrentUser(feedbackData.currentUser);
     }
