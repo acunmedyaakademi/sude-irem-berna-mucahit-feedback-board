@@ -1,146 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --purple: #ad1fea;
-  --blue: #4661e6;
-  --darkest-blue: #373f68;
-  --white: #ffffff;
-  --gray: #f2f4ff;
-  --light-gray: #f7f8fd;
-  --dark-blue: #3a4374;
+:root{
+  --purple: #AD1FEA;
+  --blue: #4661E6;
+  --darkest-blue: #373F68;
+  --white: #FFFFFF;
+  --gray: #F2F4FF;
+  --light-gray: #F7F8FD;
+  --dark-blue: #3A4374;
   --text-color: #647196;
-  --orange: #f49f85;
-  --light-blue: #62bcfa;
-  --red: #d73737;
+  --orange: #F49F85;
+  --light-blue: #62BCFA;
+  --red: #D73737;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
   font-family: "Jost", serif;
   background-color: var(--light-gray);
 }
-ol,
-ul {
-  list-style: none;
+ol, ul {
+	list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+blockquote, q {
+	quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-* {
+*{
   box-sizing: border-box;
   font-family: "Jost", serif;
 }
@@ -151,13 +70,7 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: radial-gradient(
-      128.88% 128.88% at 103.9% -10.39%,
-      #e84d70 0%,
-      #a337f6 53.09%,
-      #28a7ed 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   padding: 16px 24px;
   color: white;
   position: relative;
@@ -189,6 +102,7 @@ table {
   justify-content: space-between;
   background-color: var(--darkest-blue);
   padding: 18px 24px;
+  margin-bottom: 32px;
 }
 
 .hamburger-btn {
@@ -349,29 +263,51 @@ label {
   text-align: right;
 }
 
+.suggestion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: 24px;
+}
+
+.suggestion-img {
+  display: none;
+}
+
+.suggestion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: 24px;
+}
+
+.suggestion-img {
+  display: none;
+}
+
 /* irem end */
 
 /* sude start */
 
-.feedback-details-container {
+.feedback-details-container{
   padding: 24px;
 }
 
-.detail-buttons-container {
+.detail-buttons-container{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
 }
 
-.go-back-btn {
+.go-back-btn{
   display: flex;
   align-items: center;
   gap: 15px;
   cursor: pointer;
 }
 
-.go-back-btn p {
+.go-back-btn p{
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -379,7 +315,7 @@ label {
   color: var(--text-color);
 }
 
-.edit-feedback-btn {
+.edit-feedback-btn{
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -391,13 +327,13 @@ label {
   cursor: pointer;
 }
 
-.suggestion-item {
+.suggestion-item{
   padding: 24px;
   background-color: var(--white);
   border-radius: 10px;
 }
 
-.suggestion-item-wrapper h2 {
+.suggestion-item-wrapper h2{
   font-weight: 700;
   font-size: 13px;
   line-height: 18.79px;
@@ -406,7 +342,7 @@ label {
   margin-bottom: 9px;
 }
 
-.suggestion-item-wrapper p {
+.suggestion-item-wrapper p{
   font-weight: 400;
   font-size: 13px;
   line-height: 18.79px;
@@ -415,7 +351,7 @@ label {
   margin-bottom: 10px;
 }
 
-.suggestion-item-wrapper .category {
+.suggestion-item-wrapper .category{
   font-weight: 600;
   font-size: 13px;
   line-height: 18.79px;
@@ -428,14 +364,13 @@ label {
   display: inline-block;
 }
 
-.suggestion-item--mobile {
+.suggestion-item--mobile{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.suggestion-item--mobile .upvotes--mobile,
-.upvotes {
+.suggestion-item--mobile .upvotes--mobile, .upvotes{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -448,11 +383,9 @@ label {
   background-color: var(--gray);
   border-radius: 10px;
   padding: 6px 13px 7px 16px;
-  cursor: pointer;
 }
 
-.suggestion-item--mobile .comments--mobile,
-.comments {
+.suggestion-item--mobile .comments--mobile, .comments{
   display: flex;
   align-items: center;
   gap: 4px;
@@ -464,23 +397,22 @@ label {
   color: var(--dark-blue);
 }
 
-.suggestion-item .comments,
-.suggestion-item .upvotes {
+.suggestion-item .comments, .suggestion-item .upvotes{
   display: none;
 }
 
-.feedback-details-container .suggestion-item {
+.feedback-details-container .suggestion-item{
   margin-bottom: 24px;
 }
 
-.comments-container {
+.comments-container{
   background-color: var(--white);
   border-radius: 10px;
   padding: 24px;
   margin-bottom: 24px;
 }
 
-.comments-container h3 {
+.comments-container h3{
   font-weight: 700;
   font-size: 18px;
   line-height: 26.01px;
@@ -489,22 +421,22 @@ label {
   margin-bottom: 24px;
 }
 
-.comments-items-container {
+.comments-items-container{
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.comments-item .divider {
+.comments-item .divider{
   display: block;
   height: 1px;
   width: 100%;
-  background-color: #8c92b3;
+  background-color: #8C92B3;
   margin-top: 24px;
   opacity: 0.25;
 }
 
-.comments-item:last-child .divider {
+.comments-item:last-child .divider{
   display: none;
 }
 
@@ -689,13 +621,6 @@ label {
 /* sude end */
 
 /* berna section start */
-
-.roadmap-header,
-.roadmap-section-container-mobile-tab-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .roadmap-header,
 .roadmap-section-container-mobile-tab-header {
@@ -992,6 +917,7 @@ label {
 }
 /* mücahit end */
 
+
 @media only screen and (min-width: 768px) {
   /* berna section start */
 
@@ -1024,7 +950,7 @@ label {
   .roadmap-section-container-mobile {
     display: none;
   }
-
+  
   .roadmap-section-container-desktop-tablet {
     display: flex;
   }
@@ -1329,7 +1255,37 @@ label {
   .header {
     display: none;
   }
-
+  .header-bottom {
+    margin-bottom: 24px;
+    margin-inline: 40px;
+  }
+  
+  .suggestion-container {
+    padding-inline: 40px;
+    
+  }
+  
+  .suggestion-img {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .suggestion-img h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26.01px;
+    letter-spacing: -0.25px;
+    color: var(--white);
+  
+  }
+  
+  .filter-content {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+  }
+  
   /* irem section */
 }
 
@@ -1449,4 +1405,17 @@ label {
     height: 96px;
     margin-bottom: 32px;
   }
+  /* irem section */
+
+  .home-container {
+    display: flex;
+  }
+
+  .header-tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* irem section */
 }
+
