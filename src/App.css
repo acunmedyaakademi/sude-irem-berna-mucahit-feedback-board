@@ -161,7 +161,6 @@ table {
   padding: 16px 24px;
   color: white;
   position: relative;
-  z-index: 3000;
 }
 
 .header-tablet {
@@ -210,7 +209,7 @@ table {
 .hamburger-menu-dialog {
   position: absolute;
   top: 72px;
-  right: 0;
+  left: inherit;
   height: 100%;
   background-color: #f7f8fd;
   padding: 0;
@@ -219,7 +218,6 @@ table {
   border: none;
   padding: 24px;
 }
-
 .hamburger-buttons {
   background-color: var(--white);
   padding: 24px;
