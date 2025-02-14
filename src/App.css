@@ -257,6 +257,41 @@ table {
   }
 }
 
+.empty-feedback-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 76px 25px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.empty-content img {
+  margin-bottom: 39px;
+}
+
+.empty-content h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26.01px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  color: #3a4374;
+  margin-bottom: 14px;
+}
+
+.empty-content p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18.79px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #647196;
+  margin-bottom: 24px;
+}
+
 .hamburger-roadmap {
   background-color: white;
   border-radius: 10px;
@@ -1359,32 +1394,31 @@ label {
     margin-bottom: 24px;
     margin-inline: 40px;
   }
-  
+
   .suggestion-container {
     padding-inline: 40px;
   }
-  
+
   .suggestion-img {
     display: flex;
     align-items: center;
     gap: 16px;
   }
-  
+
   .suggestion-img h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 26.01px;
     letter-spacing: -0.25px;
     color: var(--white);
-
   }
-  
+
   .filter-content {
     display: flex;
     gap: 38px;
     align-items: center;
   }
-  
+
   /* irem section */
 }
 
@@ -1476,7 +1510,6 @@ label {
   }
   .feedback-newpage-main {
     padding: 0 42px;
-    
   }
   .feedback-newpage-main h2 {
     padding-top: 52px;
@@ -1536,7 +1569,40 @@ label {
     margin-inline: 0;
     padding-inline: 0;
   }
+
+  .empty-feedback-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 111px 206px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .empty-content img {
+    margin-bottom: 53px;
+  }
+
+  .empty-content h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34.68px;
+    letter-spacing: -0.33px;
+    text-align: center;
+    color: #3a4374;
+    margin-bottom: 16px;
+  }
+
+  .empty-content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23.12px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #647196;
+    margin-bottom: 48px;
+  }
   /* irem section */
-
-
 }

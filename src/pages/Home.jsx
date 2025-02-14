@@ -8,6 +8,7 @@ export default function Home() {
   const { data } = useContext(DataContext);
   const navigate = useNavigate(); // bunun ile butona tıkladığımda newfeedback sayfasına yönlendireceğim.
   const [isMenuOpen, setIsOpenMenu] = useState(false);
+  const [filter, setFilter] = useState("ALL");
 
   const dialogRef = useRef(null);
 
@@ -31,6 +32,13 @@ export default function Home() {
       ? (a, b) => b.comments - a.comments
       : (a, b) => a.comments - b.comments
   );
+
+  const filteredData =
+    filter === "ALL"
+      ? sortedData
+      : sortedData.filter(
+          (x) => x.category.toLowerCase() === filter.toLowerCase()
+        );
 
   // Eğer veri yoksa
   if (!data || data.length === 0) {
@@ -61,15 +69,17 @@ export default function Home() {
         <div className="header-tablet-second">
           <div className="hamburger-buttons">
             <div className="all-uı-ux">
-              <button>ALL</button>
-              <button>UI</button>
-              <button>UX</button>
+              <button onClick={() => setFilter("ALL")}>ALL</button>
+              <button onClick={() => setFilter("UI")}>UI</button>
+              <button onClick={() => setFilter("UX")}>UX</button>
             </div>
             <div className="enhancement-bug">
-              <button>Enhancement</button>
-              <button>Bug</button>
+              <button onClick={() => setFilter("Enhancement")}>
+                Enhancement
+              </button>
+              <button onClick={() => setFilter("Bug")}>Bug</button>
             </div>
-            <button>Feature</button>
+            <button onClick={() => setFilter("Feature")}>Feature</button>
           </div>
         </div>
         <div className="header-tablet-third">
@@ -105,7 +115,7 @@ export default function Home() {
           <div className="filter-content">
             <div className="suggestion-img">
               <img src="/images/header-bottom.svg" alt="" />
-              <h2>6 Suggestions</h2>
+              <h2>{filteredData.length} Suggestions</h2>
             </div>
             <div>
               <label htmlFor="sort">Sort by : </label>
@@ -129,7 +139,7 @@ export default function Home() {
           </button>
         </div>
         <div className="suggestion-container">
-          {data.length === 0 ? (
+          {filteredData.length === 0 ? (
             <div className="empty-feedback-container">
               <div className="empty-content">
                 <img src="/images/no-feedback-img.svg" alt="" />
@@ -138,28 +148,73 @@ export default function Home() {
                   Got a suggestion? Found a bug that needs to be squashed? We
                   love hearing about new ideas to improve our app.
                 </p>
-                <button onClick={() => navigate("/new-feedback")}>
+                <button
+                  className="addFeedBackBtn"
+                  onClick={() => navigate("/new-feedback")}
+                >
                   + Add Feedback
                 </button>
               </div>
             </div>
           ) : (
-            sortedData.map((x) => <Suggestion key={x.id} feedBack={x} />)
+            filteredData.map((x) => <Suggestion key={x.id} feedBack={x} />)
           )}
         </div>
         <dialog ref={dialogRef} className="hamburger-menu-dialog">
           <div className="hamburger-menu-container">
             <div className="hamburger-buttons">
               <div className="all-uı-ux">
-                <button>ALL</button>
-                <button>UI</button>
-                <button>UX</button>
+                <button
+                  onClick={() => {
+                    setFilter("ALL");
+                    dialogRef.current.close();
+                  }}
+                >
+                  ALL
+                </button>
+                <button
+                  onClick={() => {
+                    setFilter("UI");
+                    dialogRef.current.close();
+                  }}
+                >
+                  UI
+                </button>
+                <button
+                  onClick={() => {
+                    setFilter("UX");
+                    dialogRef.current.close();
+                  }}
+                >
+                  UX
+                </button>
               </div>
               <div className="enhancement-bug">
-                <button>Enhancement</button>
-                <button>Bug</button>
+                <button
+                  onClick={() => {
+                    setFilter("Enhancement");
+                    dialogRef.current.close();
+                  }}
+                >
+                  Enhancement
+                </button>
+                <button
+                  onClick={() => {
+                    setFilter("Bug");
+                    dialogRef.current.close();
+                  }}
+                >
+                  Bug
+                </button>
               </div>
-              <button>Feature</button>
+              <button
+                onClick={() => {
+                  setFilter("Feature");
+                  dialogRef.current.close();
+                }}
+              >
+                Feature
+              </button>
             </div>
             <div className="hamburger-roadmap">
               <div className="hamburger-roadmap-title">
